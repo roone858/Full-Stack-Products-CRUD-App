@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="crud">
+      <div class="header">
+        <h1>crud</h1>
+        <h3>Product management system</h3>
+      </div>
+      <div class="inputs">
+        <input id="title" type="text" placeholder="title" />
+        <div class="price-inputs">
+          <input onkeyup="geTotalPrice()" id="price" type="text" placeholder="price" />
+          <input onkeyup="geTotalPrice()" id="taxes" type="text" placeholder="taxes" />
+          <input onkeyup="geTotalPrice()" id="ads" type="text" placeholder="ads" />
+          <input onkeyup="geTotalPrice()" id="discount" type="text" placeholder="discount" />
+          <small id="small"></small>
+        </div>
+        <input id="count" type="number" placeholder="count" />
+        <input id="category" type="text" placeholder="category" />
+        <input id="create" type="button" value="create" />
+        <input id="submit"  type="button" value="submit" />
+        <div class="search-section">
+          <input id="search" type="search" placeholder="search" />
+          <div class="searchButtons">
+            <input id="searchTitle" type="button" value="search by title" />
+            <input
+              id="searchCategory"
+              type="button"
+              value="search by category"
+            />
+          </div>
+        </div>
+        <input id="delete-all" type="button" value="DELETE ALL" />
+      </div>
+
+      <table>
+        <thead>
+          <th>id</th>
+          <th>title</th>
+          <th>Price</th>
+          <th>taxes</th>
+          <th>ads</th>
+          <th>discount</th>
+          <th>total</th>
+          <th>category</th>
+          <th>count</th>
+          <th>update</th>
+          <th>delete</th>
+        </thead>
+        <tbody id="tbody">
+        
+         
+        </tbody>
+      </table>
+    </div>
+    <!-- <script src="./script.js"></script> -->
+    <script src="./fetchData.js"></script>
+    <script src="./search.js"></script>
+  </body>
+</html>
